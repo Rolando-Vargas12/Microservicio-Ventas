@@ -13,10 +13,11 @@ public class Corsconfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**") // Aplica a TODAS las rutas
-                        .allowedOrigins("*") // Permite CUALQUIER origen (incluyendo tu puerto 5174)
-                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Permite TODOS los métodos
-                        .allowedHeaders("*"); // Permite TODOS los encabezados
+                registry.addMapping("/**") // Aplica a todas las rutas
+                        .allowedOriginPatterns("*") // Permite cualquier origen
+                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Todos los verbos
+                        .allowedHeaders("*") // Todos los headers
+                        .allowCredentials(true); // Permite credenciales si fuera necesario
             }
         };
     }
