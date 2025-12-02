@@ -14,7 +14,7 @@ public class Corsconfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**") // Aplica a todas las rutas
-                        .allowedOriginPatterns("*") // Permite cualquier origen
+                        .allowedOriginPatterns("*")
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Todos los verbos
                         .allowedHeaders("*") // Todos los headers
                         .allowCredentials(true); // Permite credenciales si fuera necesario
