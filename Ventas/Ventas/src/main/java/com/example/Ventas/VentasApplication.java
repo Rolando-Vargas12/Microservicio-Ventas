@@ -19,8 +19,8 @@ public class VentasApplication {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
 				registry.addMapping("/**")
-						.allowedOrigins("*") // Permite TODOS los orígenes (incluyendo tu puerto 5174)
-						.allowedMethods("*") // Permite TODOS los métodos (GET, POST, etc.)
+						.allowedOrigins("*") 
+						.allowedMethods("*") 
 						.allowedHeaders("*");
 			}
 		};
